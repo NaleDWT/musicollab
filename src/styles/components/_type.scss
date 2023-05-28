@@ -5,6 +5,30 @@ body {
   color: $c-text;
 }
 
-.title {
-  color: $c-alt;
+.title--medium {
+  font-family: "synthemesc", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: $size-title-medium;
+  line-height: 1.03;
+  color: $c-textorange;
+}
+
+.title--small {
+  font-family: "rotunda-variable", sans-serif;
+  font-variation-settings: "wght" 800;
+  font-size: $size-title-small;
+  line-height: 1.03;
+  color: $c-grey;
+}
+.menu__el{
+  list-style: none;
+  font-family: "martian-mono-variable", sans-serif;
+  font-variation-settings: "wdth" 112.5, "wght" 700;
+}
+.menu__el a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $c-grey;
+  font-size: $size-sec;
 }
