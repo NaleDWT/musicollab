@@ -1,0 +1,135 @@
+.menu__el{
+    display: flex;
+    flex-direction: column;
+}
+
+.menu__el a{
+    margin: 8px 0 0 0;
+}
+
+.menu__liste{
+    display: none;
+}
+
+.headcontainer{
+    display: grid;
+    grid-template-columns: 15px repeat(6, 1fr) 15px;
+    grid-template-rows: 27px 24px auto 24px 72px 24px 27px;
+    grid-column-gap: 5px;
+    max-width: 100%;
+
+    &__logo{
+        grid-column: 3 / span 4;
+        grid-row: 3;
+        justify-self: center;
+    }
+
+    &__buttondark{
+        grid-column: 6;
+        grid-row: 5;
+        width: 30px;
+        height: 56px;
+        text-align: end;
+        font-size: 0;
+        justify-self: end;
+        padding: 0;
+        margin: 8px 0 0 0;
+        border: none;
+        background-image: url(../../assets/images/darbutton.svg);
+    }
+
+    &__buttondark.actif{
+        background-image: url(../../assets/images/whitebutton.svg);
+    }
+    &__music{
+        grid-column: 3 / span 3;
+        grid-row: 5;
+        border: solid 2px $c-grey;
+        border-radius: 16px;
+        margin-right: 24px;
+        display: flex;
+        flex-direction: column;
+    }
+    &__music p{
+        margin: 6px 0 0px 0;
+        text-align: center;
+        transform: translateX(-8px);
+        width: auto;
+        background-image: url(../../assets/images/music.svg);
+        background-repeat: no-repeat;
+        background-position: 112px 35%;
+    }
+    &__music button{
+        font-size: 0;
+        width: 28px;
+        height: 28px;
+        border: none;
+        background-color: #ffffff00;
+        margin: 0;
+        padding: 0;
+    }
+    &__button{
+        width: 50%;
+        display: flex;
+        justify-content:space-around;
+        margin: 2px 0 0 0;
+        align-self: center;
+    }
+    &__buttonL{
+        background-image: url(../../assets/images/leftmusicbutton.svg);
+        background-repeat: no-repeat;
+
+    }
+    &__buttonR{
+        background-image: url(../../assets/images/rightmusicbutton.svg);
+        background-repeat: no-repeat;
+    }
+}
+
+
+.ampback{
+    width: auto;
+    background-color: $c-ampdarkorange;
+    grid-column: 1 / span 8;
+    grid-row: 1 / span 7;
+    z-index: -100;
+    padding: 6px;
+    margin: 8px;
+    border: solid 14px $c-amporange;
+    border-radius: 16px;
+    display: block;
+    position: relative;
+
+    &::before{
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: #FFFFFF;
+
+    }
+}
+
+.border{
+    position: absolute;
+    width: 22px;
+
+    &--topleft{
+        top: -16px;
+        left: -16px;
+    }
+    &--topright{
+        top: -16px;
+        right: -16px;
+    }
+    &--bottomleft{
+        bottom: -16px;
+        left: -16px;
+    }
+    &--bottomright{
+        bottom: -16px;
+        right: -16px;
+    }
+}
+
+
