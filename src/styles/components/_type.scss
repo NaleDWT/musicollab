@@ -1,7 +1,8 @@
 body {
-  font-family: sans-serif;
+  font-family: "rotunda-variable", sans-serif;
+  font-variation-settings: "wght" 400;
   font-size: $size-text;
-  line-height: 1.5;
+  line-height: 1.2;
   color: $c-text;
 }
 
@@ -40,4 +41,30 @@ body {
   text-transform: uppercase;
   color: $c-grey;
   font-size: $size-music;
+}
+
+.encresec__name{
+  font-family: "martian-mono-variable", sans-serif;
+  font-variation-settings: "wdth" 112.5, "wght" 700;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+  color: $c-grey;
+  font-size: $size-music;
+  font-size: 16px;
+}
+
+.formcontainer p{
+  font-variation-settings: "wdth" 112.5, "wght" 800;
+}
+
+.formcontainer__rep{
+  font-size: 16px;
+  font-variation-settings: "wdth" 112.5, "wght" 400;
+
+}
+
+.citations{
+  font-variation-settings: "wdth" 112.5, "wght" 800;
+  line-height: 110%;
+  font-size: 25px;
 }

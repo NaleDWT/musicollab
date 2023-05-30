@@ -54,7 +54,7 @@
 
     <button class="headcontainer__buttondark">DarkMode</button>
 
-    <nav class="menu">
+    <nav class="menu" id="menu">
 
       <ul class="menu__liste">
 
@@ -125,10 +125,20 @@
 
       <div class="formcontainer">
 
-        <p class="formcontainer__question">De quel(s) instrument(s) joues-tu ?</p>
+        <p class="formcontainer__question">De quel instrument joues-tu ?</p>
 
         <ul class="formcontainer__repliste">
 
+          <li class="formcontainer__rep">Guitare</li>
+          <li class="formcontainer__rep">Batterie</li>
+          <li class="formcontainer__rep">Trompette</li>
+          <li class="formcontainer__rep">Basse</li>
+          <li class="formcontainer__rep">Piano</li>
+          <li class="formcontainer__rep">Guitare</li>
+          <li class="formcontainer__rep">Batterie</li>
+          <li class="formcontainer__rep">Trompette</li>
+          <li class="formcontainer__rep">Basse</li>
+          <li class="formcontainer__rep">Piano</li>
           <li class="formcontainer__rep">Guitare</li>
           <li class="formcontainer__rep">Batterie</li>
           <li class="formcontainer__rep">Trompette</li>
@@ -142,7 +152,7 @@
       <div class="formstates">
 
         <ul class="formstates__liste">
-          <li class="formstates__el"></li>
+          <li class="formstates__el actif"></li>
           <li class="formstates__el"></li>
           <li class="formstates__el"></li>
           <li class="formstates__el"></li>
@@ -151,17 +161,17 @@
 
         <div class="formstates__nav">
 
-          <button class="formstates__next">Next</button>
           <button class="formstates__back">Back</button>
+          <button class="formstates__next">Next</button>
 
         </div>
         
       </div>
 
-      <div class="jackplug">
-        <div class="jackplug__cable"></div>
-        <div class="jackplug__ecrou"></div>
+      <div class="jackplug jackplug--right">
       </div>
+      <!-- <div class="jackplug jackplug--left">
+      </div> -->
 
       <p>Certains proviennent de conservatoires renommés, d’autres jouent dans un garage mais leur passion reste la même.</p>
       <p>Une organisation semblable, des outils similaires mais surtout un quotidien commun !</p>
@@ -199,9 +209,8 @@
 
       </div>
 
-      <div class="jackplug">
-        <div class="jackplug__cable"></div>
-        <div class="jackplug__ecrou"></div>
+      <div class="jackplug jackplug--attaque">
+
       </div>
 
       <blockquote class="citations">Les vocaux finissent par se perdre dans le fil de la discussion et laisser place aux suivants.</blockquote>
