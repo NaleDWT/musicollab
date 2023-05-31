@@ -15,8 +15,15 @@
 
     grid-template-rows: repeat(7, auto);
 }
+
+p{
+    grid-column: 1 / span 6;
+}
 .section--harmonie{
 
+    .title--medium{
+        margin-top: 40px;
+    }
 
     & p {
         max-width:100%;
@@ -49,7 +56,7 @@ p{
         grid-column: 1 / span 6;
         grid-row: 1;
         max-width: 80%;
-        margin: 40px 0 0 0;
+        margin: 72px 0 0 0;
     }
     &--small{
         grid-column: 3 / span 4;
@@ -212,6 +219,7 @@ p{
         grid-row: 5;
         grid-column: 1 / span 6;
         display: block;
+        margin-bottom: 8px;
 
       }
 
@@ -265,5 +273,149 @@ p{
         border-radius: 16px;
         border: solid 6px $c-amporange;
 
+    }
+}
+
+.section--solution{
+
+    grid-template-rows: repeat(8, auto);
+
+    & p:nth-of-type(1){
+        grid-row: 3;
+    }
+
+    & p:nth-of-type(2){
+        grid-row: 5;
+    }
+
+    & p:nth-of-type(3){
+        grid-row: 7;
+    }
+
+}
+
+.solution{
+    height: auto;
+    grid-column: 2 / span 4;
+    background-color: $c-textorange;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    z-index: -15;
+    margin: 8px 0 48px 0;
+
+
+    &__picto{
+        transform: scale(0.6);
+        margin-bottom: 16px;
+        height: 100%;
+        margin: 0;
+    }
+
+
+
+    &--last{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        grid-column: 1 / span 5;
+        padding: 16px 0;
+
+        & svg{
+            scale: 0.8;
+        }
+    }
+}
+
+.section--conscience{
+
+    grid-template-rows: repeat(5, auto);
+
+    .title--medium{
+        grid-column: 1 / span 6;
+        max-width: 100%;
+    }
+
+    .citations{
+        margin: 8px 0 0 0;
+    }
+
+}
+
+.groupes{
+
+    list-style: none;
+    display: flex;
+    grid-column: 1 / span 6;
+    padding: 0;
+    justify-content: space-between;
+    margin: 56px 0 0 0;
+
+
+    &__logo{
+        height: 96px;
+        width: 96px;
+        background-color: #FF461E;
+        border-radius: 100px;
+
+
+    }
+
+    &__logo:nth-of-type(1){
+        background-image: url(../../assets/images/schiste.png);
+    }
+    &__logo:nth-of-type(2){
+        background-image: url(../../assets/images/lamuerte.png);
+    }
+    &__logo:nth-of-type(3){
+        background-image: url(../../assets/images/wastedlife.png);
+    }
+
+}
+
+.hyperlink{
+    text-decoration: none;
+}
+
+
+.section--passion{
+
+    grid-template-rows: repeat(5, auto);
+
+}
+
+.repete{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    grid-column: 1 / span 6;
+    justify-content: space-between;
+    margin-top: 0;
+
+    &__membres{
+        width: 80px;
+        height: 80px;
+        border-radius: 100px;
+        background-color: #FF461E;
+        font-size: 0;
+    }
+
+    &__membres:nth-of-type(1){
+        background-image: url(../../assets/images/rob.jpg);
+        background-size: contain;
+    }
+    &__membres:nth-of-type(2){
+        background-image: url(../../assets/images/teo.jpg);
+        background-size: contain;
+    }
+    &__membres:nth-of-type(3){
+        background-image: url(../../assets/images/cyril.jpg);
+        background-size: contain;
+    }
+    &__membres:nth-of-type(4){
+        background-image: url(../../assets/images/jona.jpg);
+        background-size: contain;
     }
 }
