@@ -1,0 +1,39 @@
+.footercontainer{
+    display: grid;
+    grid-template-columns: 15px repeat(6, 1fr) 15px;
+    grid-template-rows: 27px 24px auto auto 24px 27px;
+    grid-column-gap: 5px;
+    max-width: 100%;
+    margin: 44px 0 8px 0;
+
+    &__lien{
+        grid-column: 2 / span 6;
+        grid-row: 3;
+        text-align: center;
+        margin: 5px 36px 34px 36px;
+    }
+    &__lien a{
+        margin: 0 4px;
+    }
+    &__lien a:nth-of-type(2) svg{
+        transform: translateY(3px);
+    }
+
+    a{
+        grid-column: 3 / span 4;
+        grid-row: 4;
+        text-align: center;
+
+    }
+
+    .ampback{
+        grid-row: 1 / span 6;
+    }
+
+
+}
+
+
+#dwt{
+    fill: $c-grey;
+}

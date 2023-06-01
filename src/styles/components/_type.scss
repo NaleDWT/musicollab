@@ -72,4 +72,27 @@ body {
 .hyperlink{
   font-variation-settings: "wdth" 112.5, "wght" 700;
   color: $c-textorange;
+
+}
+
+.intralink{
+  font-variation-settings: "wdth" 112.5, "wght" 700;
+  font-size: $size-text;
+  text-transform: uppercase;
+  color: $c-textorange;
+  text-decoration: none;
+}
+
+.footercontainer__lien a{
+  font-variation-settings: "wdth" 112.5, "wght" 700;
+  font-size: $size-text;
+  color: $c-grey;
+  text-decoration: none;
+}
+
+.copy{
+  font-variation-settings: "wdth" 112.5, "wght" 700;
+  font-size: 14px;
+  color: $c-grey;
+  text-decoration: none;
 }

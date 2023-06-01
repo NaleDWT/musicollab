@@ -104,9 +104,10 @@ p{
     &__rep{
         color: white;
         list-style: none;
+        line-height: 120%;
         margin: 4px 16px;
         background-color: $c-textorange;
-        padding: 8px;
+        padding: 16px;
     }
     &__rep:nth-of-type(1){
         border-radius: 13px 13px 0 0;
@@ -121,6 +122,7 @@ p{
         display: flex;
         width: 100%;
         justify-content: space-between;
+        z-index: -2;
     }
     &__nav button{
         font-size: 0;
@@ -138,9 +140,7 @@ p{
 
     }
     &__back{
-        background-image: url(../../assets/images/next.svg);
-        transform: scale(-1, 1);
-        z-index: -10;
+        background-image: url(../../assets/images/back.svg);
     }
 
     &__liste{
@@ -196,7 +196,7 @@ p{
 
     .jackplug--attaque{
         position: absolute;
-        bottom: -1600px;
+        bottom: -1700px;
         left: -100px;
         transform: scale(-1, 1);
 
@@ -231,6 +231,27 @@ p{
     grid-row: 4;
     background-color: $c-textorange;
     border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    padding: 16px 16px;
+    overflow: hidden;
+
+    &__vocal{
+        height: 40px;
+        width: 50%;
+        margin: 4px;
+        background-color: $c-backgr;
+        border-radius: 100px;
+
+        &:nth-child(even){
+            align-self: end;
+        }
+    }
+
+    svg{
+        transform: scale(1.5);
+    }
+
 }
 
 .section--quotidien{
@@ -320,7 +341,7 @@ p{
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
-        grid-column: 1 / span 5;
+        grid-column: 2 / span 4;
         padding: 16px 0;
 
         & svg{
@@ -357,7 +378,7 @@ p{
     &__logo{
         height: 96px;
         width: 96px;
-        background-color: #FF461E;
+        background-color: $c-amporange;
         border-radius: 100px;
 
 
@@ -382,7 +403,7 @@ p{
 
 .section--passion{
 
-    grid-template-rows: repeat(5, auto);
+    grid-template-rows: repeat(6, auto);
 
 }
 
@@ -398,24 +419,42 @@ p{
         width: 80px;
         height: 80px;
         border-radius: 100px;
-        background-color: #FF461E;
+        background-color: $c-amporange;
         font-size: 0;
     }
 
     &__membres:nth-of-type(1){
         background-image: url(../../assets/images/rob.jpg);
-        background-size: contain;
+        background-size: cover;
+        background-position: center center;
     }
     &__membres:nth-of-type(2){
         background-image: url(../../assets/images/teo.jpg);
-        background-size: contain;
+        background-size: cover;
+        background-position: center center;
     }
     &__membres:nth-of-type(3){
         background-image: url(../../assets/images/cyril.jpg);
-        background-size: contain;
+        background-size: cover;
+        background-position: center center;
     }
     &__membres:nth-of-type(4){
         background-image: url(../../assets/images/jona.jpg);
-        background-size: contain;
+        background-size: cover;
+        background-position: center center;
     }
+}
+
+.intralink:nth-of-type(1){
+    grid-column: 2 / span 2;
+    grid-row: 6;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.intralink:nth-of-type(2){
+    grid-column: 4 / span 2;
+    grid-row: 6;
+    text-align: center;
+    margin-top: 40px;
 }
