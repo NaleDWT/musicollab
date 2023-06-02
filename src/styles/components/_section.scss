@@ -1,11 +1,11 @@
 .maincontainer{
-    width: 100vw;
+    width: 100%;
     
 }
 
 .section{
     display: grid;
-    width: calc(100vw - 56px);
+    width: calc(100% - 56px);
     padding: 0 28px;
     grid-template-columns: repeat(6, 1fr);
     grid-auto-flow: dense column;
@@ -25,9 +25,6 @@ p{
         margin-top: 40px;
     }
 
-    & p {
-        max-width:100%;
-    }
 
     & p:nth-of-type(1){
         grid-column: 1 / span 5;
@@ -116,13 +113,16 @@ p{
 
 .formstates{
     grid-column: 3 / span 2;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+
 
 
     &__nav{
         display: flex;
         width: 100%;
         justify-content: space-between;
-        z-index: -2;
     }
     &__nav button{
         font-size: 0;
@@ -130,10 +130,12 @@ p{
         width: 48%;
         background-repeat: no-repeat;
         background-size: contain;
-        background-position: right center;
+        background-position: center center;
         background-color: rgba(255, 250, 240, 0);
         border: none;
         padding: 0;
+        z-index: 100;
+        cursor: pointer;
     }
     &__next{
         background-image: url(../../assets/images/next.svg);
@@ -148,12 +150,15 @@ p{
         display: flex;
         justify-content: space-between;
         padding: 0;
+        max-width: 150px;
+        align-self: center;
     }
     &__el{
         height: 16px;
         width: 16px;
         border-radius: 100px;
         background-color: $c-reddark;
+        margin: 0 4px;
 
         &.actif{
             background-color: $c-redlight;
@@ -226,30 +231,30 @@ p{
 }
 
 .vocalcontainer{
-    height: 40vh;
+    height: 45vh;
     grid-column: 1 / span 6;
     grid-row: 4;
     background-color: $c-textorange;
     border-radius: 16px;
     display: flex;
     flex-direction: column;
-    padding: 16px 16px;
     overflow: hidden;
+    border: 16px solid $c-textorange;
+    z-index: -4;
 
-    &__vocal{
-        height: 40px;
-        width: 50%;
-        margin: 4px;
-        background-color: $c-backgr;
-        border-radius: 100px;
-
-        &:nth-child(even){
-            align-self: end;
-        }
-    }
 
     svg{
-        transform: scale(1.5);
+        transform: scale(2.8) translateY(45%);
+        z-index: -5;
+    }
+
+    &__toolbar{
+        height: 35%;
+        width: 100%;
+        background-color: $c-textorange;
+        background-image: url(../../assets/images/toolbar.svg);
+        background-repeat: no-repeat;
+        background-position: center 100%;
     }
 
 }
@@ -380,6 +385,7 @@ p{
         width: 96px;
         background-color: $c-amporange;
         border-radius: 100px;
+        background-size: cover;
 
 
     }
@@ -458,3 +464,8 @@ p{
     text-align: center;
     margin-top: 40px;
 }
+
+li a {
+    display: block;
+  }
+  

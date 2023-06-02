@@ -4,6 +4,8 @@
 @import 'components/nav';
 @import 'components/section';
 @import 'components/footer';
+@import 'components/mediatablette';
+
 
 html{
     max-width: 100vw;
@@ -17,4 +19,6 @@ body{
     margin: 0;
     padding: 0;
     background-color: $c-backgr;
+    --scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }

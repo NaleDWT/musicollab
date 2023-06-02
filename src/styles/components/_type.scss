@@ -17,7 +17,8 @@ body {
 
 .title--small {
   font-family: "rotunda-variable", sans-serif;
-  font-variation-settings: "wght" 800;
+  font-variation-settings: "wght" 200;
+  transition: font-variation-settings 0.5s;
   font-size: $size-title-small;
   line-height: 1.03;
   color: $c-grey;
@@ -96,3 +97,4 @@ body {
   color: $c-grey;
   text-decoration: none;
 }
+

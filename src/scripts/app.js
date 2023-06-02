@@ -142,4 +142,302 @@ const questions = [
  
  // Initialiser l'affichage avec la première question et ses réponses
  updateQuestionAndAnswers();
+
+
+ //Animtation GSAP
+
+ import { gsap } from "gsap";
+ import { ScrollTrigger } from "gsap/ScrollTrigger";
  
+ gsap.registerPlugin(ScrollTrigger);
+ 
+ // Animation du SVG
+ const vocalContainer = document.querySelector(".vocalcontainer");
+ const vocals = document.querySelector(".vocalcontainer__vocals");
+ 
+ gsap.to(vocals, {
+   y: "-=180%",
+   scrollTrigger: {
+     trigger: vocalContainer,
+     start: "top bottom-=10%",
+     end: "bottom",
+     scrub: true
+   }
+ });
+
+
+ const screenOrange = document.querySelector("#screenOrange");
+ const screenGrey = document.querySelector("#screenGrey");
+
+ const sectionQuotidien = document.querySelector(".section--quotidien");
+ 
+ 
+ const tl = gsap.timeline({
+   repeat: -1,
+ });
+ 
+ tl.to(screenOrange, {
+  scaleX: 0.7,
+  duration: 1,
+  delay: 0.5,
+  transformOrigin: " right",
+  ease: "power4",
+})
+tl.to(screenOrange, {
+  scaleY: 1.5,
+  duration: 1,
+  delay: 0,
+  transformOrigin: "bottom right",
+  ease: "power4",
+})
+tl.to(screenOrange, {
+  scaleX: 1,
+  duration: 1,
+  delay: 0.6,
+  transformOrigin: "bottom right",
+  ease: "power4",
+})
+tl.to(screenOrange, {
+  scaleY: 1,
+  duration: 1,
+  delay: 0,
+  transformOrigin: "bottom right",
+  ease: "power4",
+})
+
+
+
+const tlGrey = gsap.timeline({
+  repeat: -1,
+});
+
+tlGrey.to(screenGrey, {
+ scaleX: 1.5,
+ duration: 1,
+ delay: 0.6,
+ transformOrigin: " left",
+ ease: "power4",
+})
+tlGrey.to(screenGrey, {
+ scaleY: 0.6,
+ duration: 1,
+ delay: 0,
+ transformOrigin: "bottom left",
+ ease: "power4",
+})
+tlGrey.to(screenGrey, {
+ scaleX: 1,
+ duration: 1,
+ delay: 0.5,
+ transformOrigin: "bottom left",
+ ease: "power4",
+})
+tlGrey.to(screenGrey, {
+ scaleY: 1,
+ duration: 1,
+ delay: 0,
+ transformOrigin: "bottom left",
+ ease: "power4",
+})
+
+
+
+//faire tourner la nav
+
+
+// Tableau des ID des potards
+const potardIDs = ["potard1", "potard2", "potard3", "potard4", "potard5", "potard6"];
+
+// Tableau des seuils de visibilité
+const visibilityThresholds = [0.25, 0.25, 0.25, 0.25, 0.25, 0.25];
+
+// Tableau pour stocker l'état des potards
+const potardStates = {};
+
+// Fonction pour effectuer la rotation d'un potard
+function rotatePotard(potardID) {
+  const potards = document.querySelectorAll(`#${potardID}`);
+  potards.forEach((potard) => {
+    gsap.to(potard, { rotation: 90, duration: 0.5 });
+  });
+  potardStates[potardID] = true;
+}
+
+
+
+// Fonction pour réinitialiser la position d'un potard
+function resetPotardPosition(potardID) {
+  const potards = document.querySelectorAll(`#${potardID}`);
+  potards.forEach((potard) => {
+    gsap.to(potard, { rotation: 0, duration: 0.5 });
+  });
+  potardStates[potardID] = false;
+}
+
+// Observer les sections correspondantes
+const sectionHarmonie = document.querySelector('.section--harmonie');
+const sectionAttaque = document.querySelector('.section--attaque');
+const sectionSolution = document.querySelector('.section--solution');
+const sectionConscience = document.querySelector('.section--conscience');
+const sectionPassion = document.querySelector('.section--passion');
+
+const sections = [sectionHarmonie, sectionAttaque, sectionQuotidien, sectionSolution, sectionConscience, sectionPassion];
+
+// Fonction de gestion de la visibilité des sections
+function handleSectionVisibility(entries) {
+  entries.forEach((entry) => {
+    const index = sections.indexOf(entry.target);
+    const potardID = potardIDs[index];
+
+    // Si la section atteint le seuil de visibilité
+    if (entry.isIntersecting && entry.intersectionRatio >= visibilityThresholds[index]) {
+      // Réinitialiser les potards
+      potardIDs.forEach((id) => {
+        if (id !== potardID && potardStates[id]) {
+          resetPotardPosition(id);
+        }
+      });
+
+      // Tourner les potards de la section active
+      if (!potardStates[potardID]) {
+        rotatePotard(potardID);
+      }
+
+      // Tourner les potards en double
+      const potardDoubleID = potardID + "-double";
+      if (!potardStates[potardDoubleID]) {
+        rotatePotard(potardDoubleID);
+      }
+    } else if (!entry.isIntersecting && entry.intersectionRatio <= 0) {
+      resetPotardPosition(potardID);
+      const potardDoubleID = potardID + "-double";
+      resetPotardPosition(potardDoubleID);
+    }
+  });
+}
+
+// Observer les sections
+const observer = new IntersectionObserver(handleSectionVisibility, { threshold: visibilityThresholds });
+
+sections.forEach((section) => {
+  observer.observe(section);
+});
+
+
+
+
+const observere = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    const h3Element = entry.target.querySelector('h3');
+
+    if (entry.intersectionRatio >= 0.25) {
+      // Lorsque la section atteint un quart de l'écran, définissez la variation de police à 700
+      h3Element.style.fontVariationSettings = '"wght" 800';
+    } else {
+      // Sinon, définissez la variation de police à 200
+      h3Element.style.fontVariationSettings = '"wght" 200';
+    }
+  });
+}, { threshold: 0.25 });
+
+// Parcourez toutes les sections et observez-les
+sections.forEach(section => {
+  observere.observe(section);
+});
+
+
+
+
+//Ancre modifiée
+
+// Sélectionnez tous les liens d'ancrage
+const listItems = document.querySelectorAll('li');
+
+listItems.forEach((item, index) => {
+  item.addEventListener('click', event => {
+    event.preventDefault();
+
+    const link = item.querySelector('a');
+    if (link) {
+      const targetId = link.getAttribute('href').slice(1);
+      const targetElement = document.getElementById(targetId);
+
+      if (targetElement) {
+        let offset;
+        if (index === 0) {
+          offset = 55;
+        } else {
+          offset = 20;
+        }
+
+        const targetPosition = targetElement.offsetTop - offset;
+
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth'
+        });
+      }
+    }
+  });
+});
+
+
+
+
+
+
+// pour lancer et splitter l'audio
+
+const leftButton = document.getElementById('leftButton');
+const rightButton = document.getElementById('rightButton');
+const leftPlayer = document.getElementById('leftPlayer');
+const rightPlayer = document.getElementById('rightPlayer');
+
+let leftVolume = 0;
+let rightVolume = 0;
+let audioStarted = false;
+
+function playAudio() {
+  if (!audioStarted) {
+    leftPlayer.play();
+    rightPlayer.play();
+    audioStarted = true;
+  }
+}
+
+function toggleLeftVolume() {
+  if (leftVolume === 0) {
+    leftVolume = 1;
+    rightVolume = 0;
+  } else {
+    leftVolume = 0;
+  }
+  leftPlayer.volume = leftVolume;
+  rightPlayer.volume = rightVolume;
+}
+
+function toggleRightVolume() {
+  if (rightVolume === 0) {
+    rightVolume = 1;
+    leftVolume = 0;
+  } else {
+    rightVolume = 0;
+  }
+  rightPlayer.volume = rightVolume;
+  leftPlayer.volume = leftVolume;
+}
+
+leftButton.addEventListener('click', () => {
+  toggleLeftVolume();
+  playAudio();
+});
+
+rightButton.addEventListener('click', () => {
+  toggleRightVolume();
+  playAudio();
+});
+
+
+
+
+

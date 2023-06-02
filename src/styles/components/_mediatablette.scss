@@ -1,0 +1,130 @@
+@media (min-width: 600px){
+    body, html{
+        width: 70vw;
+        margin: 0 15vw;
+    }
+
+    .menu{
+        width: 70vw;
+    }
+
+    .jackplug{
+        position: absolute;
+        height: 40px;
+        width: 236px;
+        background-image: url(../../assets/images/jackplug.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        z-index: -10;
+    
+    
+        &--right{
+        bottom: -280px;
+        left: -100px;
+        transform: scale(-1, 1);
+        }
+    
+    }
+
+    .repete{
+        max-width: 70vw;
+        min-width: 400px;
+        justify-self: center;
+    }
+
+    .repete__membres{
+
+        width: 12vw;
+        height: 12vw;
+        min-width: 80px;
+        min-height: 80px;
+        border-radius: 100px;
+        background-color: $c-amporange;
+        font-size: 0;
+        margin: 0 8px;
+
+    }
+
+    .groupes{
+        max-width: 40vw;
+        min-width: 400px;
+        justify-self: center;
+    }
+
+    .groupes__logo {
+        min-height: 96px;
+        min-width: 96px;
+        width: 14vw;
+        height: 12vw;
+        margin: 0 8px;
+    }
+
+    .title--medium {
+        font-size: 8vw;
+        line-height: 1.03;
+
+      }
+      .title--small {
+        font-size: calc(31px + 1vw);
+        line-height: 1.03;
+      }
+    
+    p{
+        max-width: 500px;
+    }
+    .vocalcontainer{
+        max-width: 40vw;
+        min-width: 400px;
+        justify-self: center;
+
+        &__toolbar{
+            margin-top: 16px;
+        }
+    }
+
+    .respanim{
+        max-width: 40vw;
+        min-width: 400px;
+        justify-self: center;
+    }
+    .formcontainer{
+        max-width: 60vw;
+        min-width: 400px;
+        justify-self: center;
+    }
+
+    .solution{
+        max-width: 40vw;
+        min-width: 400px;
+        justify-self: center;
+    }
+
+    .citations{
+        max-width: 50vw;
+        min-width: 400px;
+    }
+
+    .section--conscience .title--medium {
+        grid-column: 1/span 5;
+        max-width: 100%;
+    }
+
+    .headcontainer__music{
+        width: 50%;
+        grid-column: 3 / span 4;
+        justify-self: center;
+    }
+
+}
+
+@media (min-width: 800px) {
+
+    .title--small{
+        grid-column: 4 / span 4;
+    }
+    .encresec{
+        grid-column: 3;
+        justify-self: center;
+    }
+    
+}
