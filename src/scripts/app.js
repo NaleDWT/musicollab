@@ -1,20 +1,40 @@
-console.info('coucou');
+"use strict"
 
   //Sticky menu
 
   const nav = document.querySelector(".menu");
   const header = document.querySelector(".headcontainer");
+  const stickyOffset = 112; // Nouvel offset de 112px
+  const navTop = nav.offsetTop + stickyOffset;
+
+
   const sticky = nav.offsetTop;
-  window.onscroll = function() {sticker()};
+  window.onscroll = function() { sticker() };
   function sticker() {
      if (window.pageYOffset >= sticky) {
-        nav.classList.add("sticky")
-        header.classList.add("sticky")
+        nav.classList.add("sticky");
+        header.classList.add("sticky");
      } else {
         nav.classList.remove("sticky");
         header.classList.remove("sticky");
      }
   }
+
+  if (window.innerWidth >= 1200) {
+    window.onscroll = function() { sticker() };
+    function sticker() {
+       if (window.pageYOffset >= navTop) {
+          nav.classList.add("sticky");
+          header.classList.add("sticky");
+       } else {
+          nav.classList.remove("sticky");
+          header.classList.remove("sticky");
+       }
+    }
+  }
+  
+  
+  
 
 
   //tableau formulaire
@@ -249,14 +269,14 @@ tlGrey.to(screenGrey, {
 const potardIDs = ["potard1", "potard2", "potard3", "potard4", "potard5", "potard6"];
 
 // Tableau des seuils de visibilité
-const visibilityThresholds = [0.25, 0.25, 0.25, 0.25, 0.25, 0.25];
+const visibilityThresholds = [0.3, 0.3, 0.3, 0.3, 0.3, 0.3];
 
 // Tableau pour stocker l'état des potards
 const potardStates = {};
 
 // Fonction pour effectuer la rotation d'un potard
 function rotatePotard(potardID) {
-  const potards = document.querySelectorAll(`#${potardID}`);
+  const potards = document.querySelectorAll(`.${potardID}`);
   potards.forEach((potard) => {
     gsap.to(potard, { rotation: 90, duration: 0.5 });
   });
@@ -267,7 +287,7 @@ function rotatePotard(potardID) {
 
 // Fonction pour réinitialiser la position d'un potard
 function resetPotardPosition(potardID) {
-  const potards = document.querySelectorAll(`#${potardID}`);
+  const potards = document.querySelectorAll(`.${potardID}`);
   potards.forEach((potard) => {
     gsap.to(potard, { rotation: 0, duration: 0.5 });
   });
@@ -330,15 +350,17 @@ const observere = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     const h3Element = entry.target.querySelector('h3');
 
-    if (entry.intersectionRatio >= 0.25) {
-      // Lorsque la section atteint un quart de l'écran, définissez la variation de police à 700
+    if (entry.intersectionRatio >= 0.3) {
+      // Lorsque la section atteint un quart de l'écran, définissez la variation de police à 800 avec une transition de 1 seconde
+      h3Element.style.transition = 'font-variation-settings 1s';
       h3Element.style.fontVariationSettings = '"wght" 800';
     } else {
-      // Sinon, définissez la variation de police à 200
+      // Sinon, définissez la variation de police à 200 sans transition
+      h3Element.style.transition = 'none';
       h3Element.style.fontVariationSettings = '"wght" 200';
     }
   });
-}, { threshold: 0.25 });
+}, { threshold: 0.3 });
 
 // Parcourez toutes les sections et observez-les
 sections.forEach(section => {

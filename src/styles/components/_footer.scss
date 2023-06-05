@@ -37,3 +37,37 @@
 #dwt{
     fill: $c-grey;
 }
+
+
+
+@media (min-width: 1200px) {
+    
+    .footercontainer{
+        margin: 42px 94px 0 80px;
+
+        height: 428px;
+
+        .border{
+            position: absolute;
+            width: 22px;
+        
+            &--topleft{
+                top: -21px;
+                left: -21px;
+            }
+            &--topright{
+                top: -21px;
+                right: -21px;
+            }
+            &--bottomleft{
+                bottom: -21px;
+                left: -21px;
+            }
+            &--bottomright{
+                bottom: -21px;
+                right: -21px;
+            }
+        }
+    }
+    
+}

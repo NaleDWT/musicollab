@@ -5,6 +5,7 @@
 @import 'components/section';
 @import 'components/footer';
 @import 'components/mediatablette';
+@import 'components/mediadesktop';
 
 
 html{
@@ -21,4 +22,12 @@ body{
     background-color: $c-backgr;
     --scroll-behavior: smooth;
     scroll-behavior: smooth;
+}
+
+@media (min-width: 1200px) {
+
+    body{
+        background-color: $c-backgr-desktop;
+    }
+
 }
