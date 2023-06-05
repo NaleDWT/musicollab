@@ -303,7 +303,7 @@ const sectionPassion = document.querySelector('.section--passion');
 
 const sections = [sectionHarmonie, sectionAttaque, sectionQuotidien, sectionSolution, sectionConscience, sectionPassion];
 
-// Fonction de gestion de la visibilité des sections
+// visibilité des sections
 function handleSectionVisibility(entries) {
   entries.forEach((entry) => {
     const index = sections.indexOf(entry.target);
@@ -393,15 +393,30 @@ listItems.forEach((item, index) => {
         }
 
         const targetPosition = targetElement.offsetTop - offset;
+        const targetPositionDesk = targetElement.offsetTop + 450;
+
+        if (window.innerWidth < 1200) {
+
 
         window.scrollTo({
           top: targetPosition,
           behavior: 'smooth'
         });
+
+      } else {
+        window.scrollTo({
+          top: targetPositionDesk,
+          behavior: 'smooth'
+        });
+      }
+
+
       }
     }
   });
 });
+
+
 
 
 
@@ -463,3 +478,53 @@ rightButton.addEventListener('click', () => {
 
 
 
+const hoverList = document.querySelector('.hover-list');
+hoverList.addEventListener('mouseenter', createList);
+
+function createList() {
+  const numListFire = Math.floor(Math.random() * 2) + 4;
+  for (let i = 0; i < numListFire; i++) {
+    setTimeout(() => {
+      const listFire = document.createElement('span');
+      listFire.className = 'listFire';
+      hoverList.appendChild(listFire);
+      setTimeout(() => {
+        listFire.remove();
+      }, 500);
+    }, i * 100);
+  }
+}
+
+const hoverStep = document.querySelector('.hover-step');
+hoverStep.addEventListener('mouseenter', createStep);
+
+function createStep() {
+  const numStepFire = Math.floor(Math.random() * 2) + 4;
+  for (let i = 0; i < numStepFire; i++) {
+    setTimeout(() => {
+      const stepFire = document.createElement('span');
+      stepFire.className = 'stepFire';
+      hoverStep.appendChild(stepFire);
+      setTimeout(() => {
+        stepFire.remove();
+      }, 500);
+    }, i * 100);
+  }
+}
+
+const hoverTempo = document.querySelector('.hover-tempo');
+hoverTempo.addEventListener('mouseenter', createTempo);
+
+function createTempo() {
+  const numTempoFire = Math.floor(Math.random() * 2) + 4;
+  for (let i = 0; i < numTempoFire; i++) {
+    setTimeout(() => {
+      const tempoFire = document.createElement('span');
+      tempoFire.className = 'tempoFire';
+      hoverTempo.appendChild(tempoFire);
+      setTimeout(() => {
+        tempoFire.remove();
+      }, 500);
+    }, i * 100);
+  }
+}
