@@ -5,6 +5,8 @@
     grid-column-gap: 5px;
     max-width: 100%;
     margin: 44px 0 8px 0;
+    position: relative;
+
 
     &__lien{
         grid-column: 2 / span 6;
@@ -43,7 +45,7 @@
 @media (min-width: 1200px) {
     
     .footercontainer{
-        margin: 42px 94px 0 80px;
+        margin: 42px 94px 150px 80px;
 
         height: 428px;
 
@@ -123,7 +125,14 @@
 
     }
 
-
+    .cigarettes{
+        position: absolute;
+        height: 66px;
+        width: 145px;
+        background-image: url(../../assets/images/cigarettes.svg);
+        bottom: -70px;
+        right: 50px;
+    }
 
 
 
