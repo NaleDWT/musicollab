@@ -5,6 +5,9 @@
     background-color: $c-backgr;
     z-index: 1000;
 
+    cursor: url("../../assets/images/cursoractif.png"), auto !important;
+
+
 
     &__liste{
         margin: 16px 22px;
@@ -22,6 +25,8 @@
 
     &__el a{
         margin: 8px 0 0 0;
+        cursor: url("../../assets/images/cursoractif.png"), auto !important;
+
     }
 
     &__el svg{

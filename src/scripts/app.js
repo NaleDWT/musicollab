@@ -464,6 +464,11 @@ function toggleRightVolume() {
   leftPlayer.volume = leftVolume;
 }
 
+
+
+
+
+
 leftButton.addEventListener('click', () => {
   toggleLeftVolume();
   playAudio();
@@ -472,6 +477,7 @@ leftButton.addEventListener('click', () => {
 rightButton.addEventListener('click', () => {
   toggleRightVolume();
   playAudio();
+
 });
 
 
@@ -479,7 +485,10 @@ rightButton.addEventListener('click', () => {
 
 
 const hoverList = document.querySelector('.hover-list');
+const hoverListPic = document.querySelector('.list');
 hoverList.addEventListener('mouseenter', createList);
+hoverListPic.addEventListener('mouseenter', createList);
+
 
 function createList() {
   const numListFire = Math.floor(Math.random() * 2) + 4;
@@ -495,8 +504,15 @@ function createList() {
   }
 }
 
+
+
+
 const hoverStep = document.querySelector('.hover-step');
+const hoverStepPic = document.querySelector('.songs');
+
 hoverStep.addEventListener('mouseenter', createStep);
+hoverStepPic.addEventListener('mouseenter', createStep);
+
 
 function createStep() {
   const numStepFire = Math.floor(Math.random() * 2) + 4;
@@ -513,7 +529,9 @@ function createStep() {
 }
 
 const hoverTempo = document.querySelector('.hover-tempo');
+const hoverTempoPic = document.querySelector('.tempo');
 hoverTempo.addEventListener('mouseenter', createTempo);
+hoverTempoPic.addEventListener('mouseenter', createTempo);
 
 function createTempo() {
   const numTempoFire = Math.floor(Math.random() * 2) + 4;

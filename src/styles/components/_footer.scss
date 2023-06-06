@@ -70,7 +70,9 @@
         }
 
         &__lien{
-            margin: 180px 0 0 0;
+            margin: 186px 0 0 0;
+            z-index: 10;
+
         }
 
         &__lien a{
@@ -83,6 +85,46 @@
     .footercontainer__lien a:nth-of-type(2) svg{
         transform: scale(1.3) translateY(1.4px);
     }
+
+    .footercontainer a{
+        grid-row: 3;
+        width: 50%;
+        justify-self: center;
+        margin-top: 15%;
+        cursor: url("../../assets/images/cursoractif.png"), auto !important;
+
+    }
+
+    .copy{
+        position: relative;
+        background-image: url(../../assets/images/footermask.svg);
+        background-position: center -20%;
+        background-size: 210px 30%;
+        background-repeat: no-repeat;
+    }
+
+
+
+
+    .copy::after{
+        content: '';
+        position: relative;
+        display: block;
+        height: 80%;
+        grid-column: 3 / span 3;
+        border: solid 3px $c-grey;
+        border-radius: 16px;
+        padding: 0 5% 0 5%;
+        margin-top: -10px;
+        z-index: -10;
+
+
+
+
+    }
+
+
+
 
 
     

@@ -5,6 +5,7 @@
         width: 100vw;
         font-size: $size-text-destkop;
         line-height: 1.2;
+        cursor: url("../../assets/images/cursor.png"), auto !important;
 
     }
 
@@ -32,6 +33,8 @@
         justify-self: center;
         position: relative;
         z-index: 10;
+
+        
 
 
         &__music{
@@ -412,7 +415,12 @@
             grid-column: 2 / span 5;
             grid-row: 5;
         }
+
+        .title--small{
+            grid-column: 6 / span 4;
+        }
     }
+
 
     .solution{
 
@@ -520,11 +528,15 @@
         grid-column: 4 /span 3;
         grid-row: 8;
         margin: 0 0 56px 0;
+        cursor: url("../../assets/images/cursoractif.png"), auto !important;
+
     }
     .intralink:nth-of-type(2) {
         grid-column: 5 /span 3;
         grid-row: 8;
         margin: 0 0 56px 0;
+        cursor: url("../../assets/images/cursoractif.png"), auto !important;
+
     }
 
     .repete{
@@ -547,16 +559,22 @@
         position: absolute;
         top: -10%;
         left: 10%;
+        cursor: url("../../assets/images/cursoractif.png"), auto !important;
+
     }
     .tempo{
         position: absolute;
         top: 15%;
         right: 0;
+        cursor: url("../../assets/images/cursoractif.png"), auto !important;
+
     }
     .songs{
         position: absolute;
         bottom: 0;
         left: 10%;
+        cursor: url("../../assets/images/cursoractif.png"), auto !important;
+
     }
     .pictoscontainer svg{
         transform: scale(0.9);
@@ -568,6 +586,8 @@
     .hover-list {
         position: relative;
         transition: background-color 0.3s;
+        cursor: url("../../assets/images/cursoractif.png"), auto !important;
+
       }
       
       
@@ -581,10 +601,13 @@
         background-image: url(../../assets/images/list.svg);
         background-size: cover;
         animation: fireworks 0.5s linear;
+        z-index: 1000;
       }
       .hover-step {
         position: relative;
         transition: background-color 0.3s;
+        cursor: url("../../assets/images/cursoractif.png"), auto !important;
+
       }
       
       
@@ -603,6 +626,8 @@
       .hover-tempo {
         position: relative;
         transition: background-color 0.3s;
+        cursor: url("../../assets/images/cursoractif.png"), auto !important;
+
       }
       
       
@@ -628,6 +653,150 @@
           opacity: 0;
         }
       }
+
+      .circle {
+        width: 15px;
+        height: 15px;
+        background-color: white;
+        border-radius: 50%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .circlel {
+        width: 15px;
+        height: 15px;
+        background-color: white;
+        border-radius: 50%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .headcontainer--uikit{
+        grid-template-columns: repeat(10, 1fr);
+        margin: 0 120px;
+        grid-column-gap: 16px;
+        grid-template-rows: auto;
+        position: relative;
+    
+        .headcontainer__logo{
+            grid-column: 1 / span 3;
+            margin: 46px;
+            transform: scale(1.3);
+        }
+
+
+        &::before{
+            content: '';
+            display: none;
+        }
+    
+        &::after{
+            content: '';
+            display: block;
+            position: absolute;
+            height: 8px;
+            width: auto;
+            right: 5%;
+            margin: 0 0vw;
+            bottom: 0;
+            background-color: $c-textorange;
+        }
+
+
+    }
+    .citations{
+        font-size: $size-citations-desktop;
+    }
+
+    .maincontainer--uikit{
+
+
+        .title--medium{
+            margin-left: 140px;
+        }
+
+        & p{
+            grid-row: 2;
+        }
+
+        .citations{
+            grid-column: 6 / span 4;
+            grid-row: 2;
+            margin-top: 48px;
+        }
+    }
+
+    .colors{
+
+        &__li{
+            grid-template-columns: repeat(6, auto);
+            grid-column: 1 / span 10;
+    
+          }
+        
+        &__el{
+            margin: 16px 0;
+        }
+        &__back{
+            height: 140px;
+            width: 140px;
+            margin: 0 8px 16px 8px;
+        }
+    
+    
+    
+      }
+
+      .buttons{
+
+        &__li{
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(8, auto);
+            grid-column: 1 / span 10;
+            margin-top: 48px;
+    
+    
+    
+          }
+    
+        &__el{
+            width: 134px;
+            height: 134px;
+            margin: 8px 0;
+            justify-self: center;
+    
+    
+        }
+    }
+
+    .footercontainer--uikit{
+
+        .ampback{
+            display: none;
+        }
+
+        .intralink{
+            grid-row: 3;
+            align-self: flex-end;
+            margin: 0 0 40px 0;
+            font-size: 33px;
+        }
+        & a.intralink{
+            grid-column: 2 / span 2;
+        }
+        .intralink:nth-of-type(2){
+            grid-column: 6 / span 2;
+        }
+
+    }
+      
       
 
 
@@ -658,4 +827,31 @@
             font-variation-settings: "wght" 700;
         }
     }
+}
+
+
+@media (min-width: 1600px){
+
+    .section{
+        width: calc(100vw - 280px - 20vw);
+        margin: 0 7vw;
+    }
+
+    .ampback.main{
+        width: calc(76vw - 176px);
+    }
+
+    .formcontainer__repliste{
+        max-height: 28vh;
+    }
+
+    .groupes{
+        grid-column: 2 / span 4;
+        justify-self: start;
+    }
+    .repete__membres{
+        width: 6vw;
+        height: 6vw;
+    }
+
 }

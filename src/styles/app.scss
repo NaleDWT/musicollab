@@ -30,4 +30,18 @@ body{
         background-color: $c-backgr-desktop;
     }
 
+    body.ui-kit{
+        background-color: $c-backgr;
+    }
+
+}
+
+
+@media (min-width: 1600px){
+
+    body{
+        margin: 0 10vw;
+        width: calc(100vw - 20vw);
+    }
+
 }

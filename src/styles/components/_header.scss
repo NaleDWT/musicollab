@@ -6,6 +6,8 @@
     grid-column-gap: 5px;
     max-width: 100%;
 
+
+
     &__logo{
         grid-column: 3 / span 4;
         grid-row: 3;
@@ -24,6 +26,8 @@
         margin: 8px 0 0 0;
         border: none;
         background-image: url(../../assets/images/darbutton.svg);
+        cursor: url("../../assets/images/cursoractif.png"), auto !important;
+
     }
 
     &__buttondark.actif{
@@ -37,6 +41,7 @@
         margin-right: 24px;
         display: flex;
         flex-direction: column;
+
     }
     &__music p{
         margin: 6px 0 0px 20px;
@@ -55,6 +60,8 @@
         background-color: #ffffff00;
         margin: 0;
         padding: 0;
+        cursor: url("../../assets/images/cursoractif.png"), auto !important;
+
     }
     &__button{
         width: 50%;
@@ -71,6 +78,7 @@
     &__buttonR{
         background-image: url(../../assets/images/rightmusicbutton.svg);
         background-repeat: no-repeat;
+        position: relative;
     }
     &.sticky{
         margin-bottom: 105px;
@@ -123,6 +131,29 @@
     &--bottomright{
         bottom: -16px;
         right: -16px;
+    }
+}
+
+
+.headcontainer--uikit{
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    position: relative;
+
+    .headcontainer__logo{
+        grid-column: 1;
+        margin: 46px;
+    }
+
+    &::after{
+        content: '';
+        display: block;
+        position: absolute;
+        height: 8px;
+        width: 90vw;
+        margin: 0 5vw;
+        bottom: 0;
+        background-color: $c-textorange;
     }
 }
 

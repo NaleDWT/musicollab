@@ -135,7 +135,6 @@ p{
         border: none;
         padding: 0;
         z-index: 100;
-        cursor: pointer;
     }
     &__next{
         background-image: url(../../assets/images/next.svg);
@@ -488,3 +487,156 @@ li a {
     position: absolute;
     will-change: transform;
   }
+
+
+  .maincontainer--uikit{
+
+    .title--medium{
+        margin-left: 28px;
+    }
+
+    .title--small{
+        font-variation-settings: "wght" 800;
+        grid-row: 1;
+        grid-column: 1 / span 3;
+    }
+
+  }
+
+  .colors{
+
+    &__li{
+        list-style: none;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        grid-column: 1 / span 6;
+        margin-top: 32px;
+
+      }
+    
+    &__el{
+        margin: 16px 0;
+        text-align: center;
+        justify-self: center;
+    }
+    &__back{
+        height: 96px;
+        width: 96px;
+        margin: 0 8px 8px 8px;
+        background-color: aqua;
+    }
+
+
+
+  }
+  
+    #back1{
+
+    background-color: $c-backgr;
+    border: solid 2px $c-grey;
+}
+
+    #back2{
+
+    background-color: #505050;
+}
+
+    #back3{
+
+    background-color: #303030;
+}
+
+    #back4{
+
+    background-color: #D46301;
+}
+    #back5{
+
+    background-color: #A54C00;
+}
+    #back6{
+
+    background-color: #C94F11;
+}
+
+
+
+.buttons{
+
+    &__li{
+        list-style: none;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        grid-column: 1 / span 6;
+        margin-top: 32px;
+
+
+
+      }
+
+    &__el{
+        width: 74px;
+        height: 74px;
+        margin: 8px 0;
+        justify-self: center;
+
+
+    }
+
+
+}
+
+.potardpicto{
+    background-image: url(../../assets/images/potard.svg);
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.darkpicto{
+    background-image: url(../../assets/images/darbutton.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.cursorpicto{
+    background-image: url(../../assets/images/cusor.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.cursoractifpicto{
+    background-image: url(../../assets/images/cusoractif.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.backpicto{
+    background-image: url(../../assets/images/back.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 80%;
+
+}
+.nextpicto{
+    background-image: url(../../assets/images/next.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 80%;
+}
+
+.rightpicto{
+    background-image: url(../../assets/images/rightmusicbutton.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50%;
+}
+
+.leftpicto{
+    background-image: url(../../assets/images/leftmusicbutton.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50%;
+}
+
