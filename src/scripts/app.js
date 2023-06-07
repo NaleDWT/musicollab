@@ -546,3 +546,47 @@ function createTempo() {
     }, i * 100);
   }
 }
+
+
+var copyElement = document.querySelector('.copy');
+
+copyElement.addEventListener('click', function(event) {
+
+  var elementHeight = copyElement.offsetHeight;
+
+  var clickPosition = event.clientY - copyElement.getBoundingClientRect().top;
+
+  var topLimit = elementHeight * 0.1;
+
+  if (clickPosition > topLimit) {
+    // Annulez l'action par défaut du clic
+    event.preventDefault();
+  }
+});
+
+
+
+//affichage darkmode
+
+const bouttonDarkmode = document.querySelector(".headcontainer__buttondark");
+
+var currentState = localStorage.getItem("darkmode");
+if (currentState == "on") {
+  localStorage.setItem("darkmode", "on");
+  document.body.classList.add("darkactif");
+} else {
+  localStorage.setItem("darkmode", "off");
+  document.body.classList.remove("darkactif");
+}
+
+bouttonDarkmode.addEventListener('click', function(){
+  var currentState = localStorage.getItem("darkmode");
+  if (currentState == "off") {
+    localStorage.setItem("darkmode", "on");
+    document.body.classList.add("darkactif");
+  } else {
+    localStorage.setItem("darkmode", "off");
+    document.body.classList.remove("darkactif");
+  }
+
+});

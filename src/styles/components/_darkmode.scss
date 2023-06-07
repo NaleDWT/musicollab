@@ -1,0 +1,183 @@
+body.darkactif{
+
+    .title--medium{
+        color: #E15713;
+    }
+    .title--small{
+        color: #CFCFCF;
+    }
+
+    background-color: #151515;
+
+    .menu__el svg circle{
+        fill: #CFCFCF;
+    }
+
+    .menu__el svg path{
+        fill: #333333;
+    }
+
+    .menu{
+        background-color: #151515;
+
+    }
+
+    .menu__el a{
+        color: #CFCFCF;
+    }
+
+    p{
+        color: #CFCFCF;
+    }
+    .citations{
+        color: #CFCFCF;
+    }
+
+    .encresec svg {
+
+        circle{
+            fill: #CFCFCF;
+        }
+
+        path{
+            fill: #333333;
+
+        }
+
+    }
+
+    .encresec__name{
+        color: #CFCFCF;
+    }
+
+    a{
+        color: #E15713;
+    }
+
+    .headcontainer__logo g path{
+
+        fill: #CFCFCF;
+    
+    }
+
+    .headcontainer__logo g :nth-child(1){
+
+        fill: #151515;
+    
+    }
+
+    .ampback::before{
+        background-color: #151515;
+    }
+
+    .headcontainer__music {
+        border: solid 2px #CFCFCF;
+
+        p{
+            background-image: url(../../assets/images/musicdark.svg);
+        }
+    }
+
+    .ampback svg path{
+        fill: #CFCFCF;
+    }
+
+    .footercontainer{
+        a{
+            color: #CFCFCF;
+        }
+    }
+
+    #dwt{
+
+        fill: #CFCFCF;
+    }
+
+    .formstates__next{
+        
+        background-image: url(../../assets/images/nextdark.svg);
+
+    }
+
+    .formstates__back{
+        
+        background-image: url(../../assets/images/backdark.svg);
+
+    }
+
+    .backpicto{
+        background-image: url(../../assets/images/backdark.svg);
+    }
+
+    .nextpicto{
+        background-image: url(../../assets/images/nextdark.svg);
+
+    }
+
+    .formcontainer{
+        background-color: #CFCFCF;
+    }
+
+    .formcontainer__question{
+        color: #0D0D0D;
+    }
+
+    .colors__el{
+        color: #CFCFCF;
+    }
+
+
+    @media (min-width: 1200px) {
+    
+        .copy {
+
+            background-image: url(../../assets/images/footermaskdark.svg);
+    
+            &::after{
+                border: solid 3px #CFCFCF;
+            }
+        }
+    
+        .menu{
+
+            border: solid 3px #CFCFCF;
+    
+            &::after{
+                background-color: #CFCFCF;
+            }
+            &::before{
+                background-color: #CFCFCF;
+            }
+        }
+    
+        .headcontainer__music {
+
+            border: solid 3px #CFCFCF;
+    
+            &::after{
+                background-color: #CFCFCF;
+            }
+        }
+
+        .headcontainer__credits{
+
+            color: #CFCFCF;
+        }
+
+        .headcontainer__buttondark{
+
+            background-image: url(../../assets/images/lightbutton.svg);
+        }
+
+        .pathwi{
+            fill: #CFCFCF;
+        }
+
+        .ampback{
+            border: solid 24px #ED6F01;
+        }
+    
+    }
+
+}
+

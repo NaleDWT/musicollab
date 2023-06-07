@@ -13,6 +13,8 @@
         grid-row: 3;
         text-align: center;
         margin: 5px 36px 34px 36px;
+        z-index: 1;
+
     }
     &__lien a{
         margin: 0 4px;
@@ -79,7 +81,7 @@
 
         &__lien a{
             font-size: $size-text-destkop;
-            margin: 0 13px;
+            margin: 0 8px;
         }
 
     }
@@ -103,6 +105,7 @@
         background-position: center -20%;
         background-size: 210px 30%;
         background-repeat: no-repeat;
+
     }
 
 
@@ -119,6 +122,7 @@
         padding: 0 5% 0 5%;
         margin-top: -10px;
         z-index: -10;
+        pointer-events: none;
 
 
 

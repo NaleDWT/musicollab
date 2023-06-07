@@ -6,6 +6,8 @@
 @import 'components/footer';
 @import 'components/mediatablette';
 @import 'components/mediadesktop';
+@import 'components/darkmode';
+
 
 
 html{
@@ -28,11 +30,28 @@ body{
 
     body{
         background-color: $c-backgr-desktop;
+
+        &.ui-kit{
+            background-color: $c-backgr;
+        }
+
+        &.credits{
+            background-color: $c-backgr;
+        }
     }
 
-    body.ui-kit{
-        background-color: $c-backgr;
+    body.darkactif{
+        background-color: #151515;
+
+        &.ui-kit{
+            background-color: #151515;
+        }
+
+        &.credits{
+            background-color: #151515;
+        }
     }
+
 
 }
 

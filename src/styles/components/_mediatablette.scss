@@ -115,6 +115,20 @@
         justify-self: center;
     }
 
+    .maincontainer--credits{
+
+        .title--small{
+            grid-column: 4 / span 2;
+        }
+        .encresec{
+            grid-column: 3;
+        }
+
+        p{
+            max-width: 400px;
+        }
+    }
+
 }
 
 @media (min-width: 800px) {
