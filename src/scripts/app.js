@@ -590,3 +590,23 @@ bouttonDarkmode.addEventListener('click', function(){
   }
 
 });
+
+
+//encre up
+
+const pick = document.getElementById('pick');
+
+pick.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 0) {
+        pick.classList.add('actif');
+    } else {
+        pick.classList.remove('actif');
+    }
+});
