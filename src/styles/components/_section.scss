@@ -387,6 +387,8 @@ p{
         background-color: $c-amporange;
         border-radius: 100px;
         background-size: cover;
+        cursor: url("../../assets/images/cursoractif.png"), auto !important;
+
 
 
     }
@@ -693,3 +695,29 @@ li a {
     padding: 0;
     grid-column: 1 / span 6;
 }
+
+.cigarettes{
+    position: relative
+}
+  
+  .cigarettes::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateY(-130%);
+    width: 100px;
+    height: 100px;
+    background-image: url(../../assets/images/smoke.svg);
+    background-position: 30% 0%;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 1s, top 1s ;
+  }
+  
+  .cigarettes:hover::after {
+    opacity: 1;
+    top: 0;
+  }
+  

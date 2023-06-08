@@ -22,6 +22,13 @@
         display: none;
     }
 
+    .hyperlink{
+        
+        cursor: url("../../assets/images/cursoractif.png"), auto !important;
+
+    }
+    
+
     
     .headcontainer{
         display: grid;
@@ -806,6 +813,11 @@
         }
         margin-bottom: 0;
 
+        .footercontainer__lien{
+            width: 50%;
+            justify-self: center;
+        }
+
     }
 
 
@@ -899,6 +911,23 @@
     .repete__membres{
         width: 6vw;
         height: 6vw;
+    }
+
+}
+
+@media (min-width: 2000px){
+
+    .title--medium{
+        grid-column: 2 /span 4;
+    }
+    .title--small{
+        grid-column: 6 /span 4;
+    }
+
+    .solution--last{
+        grid-row: 5;
+        grid-column: 6 / span 2;
+
     }
 
 }
