@@ -854,10 +854,11 @@
     }
 
     .pick{
+        display: block;
         width: 60px;
         height: 60px;
-        bottom: 220px;
-        right: 10%;
+        bottom: 40px;
+        right: 10px;
 
       }
     
@@ -922,6 +923,12 @@
         height: 6vw;
     }
 
+    .pick{
+
+        right: 8%;
+
+      }
+
 }
 
 @media (min-width: 2000px){
@@ -938,5 +945,8 @@
         grid-column: 6 / span 2;
 
     }
+
+
+    
 
 }

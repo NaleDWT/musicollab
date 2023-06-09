@@ -729,13 +729,11 @@ li a {
 
 
 .pick{
-    cursor: url("../../assets/images/cursoractif.png"), auto !important;
     position: fixed;
     width: 50px;
     height: 50px;
     display: block;
     bottom: 150px;
-    right: 10%;
     transition: transform 0.3s ease;
     background-image: url(../../assets/images/encreup.svg);
     background-size: contain;
@@ -743,8 +741,11 @@ li a {
     font-size: 0;
     transform: rotate(-180deg);
     z-index: 100;
+    display: none;
   }
 
 .actif#pick {
     transform: rotate(0deg);
+    cursor: url("../../assets/images/cursoractif.png"), auto !important;
+
 }
